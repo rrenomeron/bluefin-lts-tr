@@ -1,9 +1,9 @@
 ###############################################################################
 # PROJECT NAME CONFIGURATION
 ###############################################################################
-# Name: finpilot
+# Name: bluefin-lts-tr
 #
-# IMPORTANT: Change "finpilot" above to your desired project name.
+# IMPORTANT: Change "bluefin-lts-tr" above to your desired project name.
 # This name should be used consistently throughout the repository in:
 #   - Justfile: export image_name := env("IMAGE_NAME", "your-name-here")
 #   - README.md: # your-name-here (title)
@@ -39,17 +39,12 @@ FROM scratch AS ctx
 
 COPY build /build
 COPY custom /custom
-# Copy from OCI containers to distinct subdirectories to avoid conflicts
-# Note: Renovate can automatically update these :latest tags to SHA-256 digests for reproducibility
-COPY --from=ghcr.io/projectbluefin/common:latest@sha256:b8fe93b16674a547b4cf38493af19caa484d9575956fc3be04ca3d10faec23ff /system_files /oci/common
-COPY --from=ghcr.io/ublue-os/brew:latest@sha256:ca91068f51ce663d495ccfc829352d6621ec95f6c7db447ade55023b222f9762 /system_files /oci/brew
-# Uncomment if you need the akmods kernel stuff
-# COPY --from=ghcr.io/ublue-os/akmods:coreos-stable-43@sha256:4ec52946a8012117c91f28407fafef4654bab09133a35991d195040a1161c2dd / /oci/akmods
+
 # Copy from submodule.  We put it under /oci for convenience
 COPY tr-osforge/reusable_scripting /oci/tr-osforge
 
 # Base Image (substitute with your chosen base image)
-FROM ghcr.io/ublue-os/silverblue-main:latest
+FROM ghcr.io/ublue-os/bluefin-dx:lts
 
 
 ## Example alternative base images;

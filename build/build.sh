@@ -13,15 +13,10 @@ echo "Building ${IMAGE_NAME}:${TAG}"
 # Remove "bluefin-parity" if the base image is Bluefin.
 OSFORGE_SCRIPTS_TO_USE=(
     "flatpak-substiution-removals"
-    "bluefin-parity"
     "tr-pki"
     "tr-ui"
     "google-chrome"
     "vscode"
-    "brew"
-    "cockpit"
-    "virtualization"
-    "docker"
 )
 if command -v dnf5; then
     export DNF_CMD=dnf5

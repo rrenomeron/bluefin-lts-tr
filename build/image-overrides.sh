@@ -3,3 +3,14 @@
 set -eoux pipefail
 
 # Use this for build steps that are unique to this particular image
+
+echo "Install Bluefin packages missing from LTS"
+dnf install -y \
+    nss-tools \
+    netcat \
+    clinfo
+
+echo "Disabling unneeded/unwanted systemd units"
+systemctl disable tailscaled
+systemctl disable docker.socket
+systemctl disable docker.service
