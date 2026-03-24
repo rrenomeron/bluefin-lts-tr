@@ -1,9 +1,9 @@
 ###############################################################################
 # PROJECT NAME CONFIGURATION
 ###############################################################################
-# Name: bluefin-lts-tr
+# Name: tr-desktop-bluefin-lts
 #
-# IMPORTANT: Change "bluefin-lts-tr" above to your desired project name.
+# IMPORTANT: Change "tr-desktop-bluefin-lts" above to your desired project name.
 # This name should be used consistently throughout the repository in:
 #   - Justfile: export image_name := env("IMAGE_NAME", "your-name-here")
 #   - README.md: # your-name-here (title)
