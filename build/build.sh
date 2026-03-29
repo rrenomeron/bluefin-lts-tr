@@ -16,7 +16,7 @@ OSFORGE_SCRIPTS_TO_USE=(
     "tr-pki"
     "tr-ui"
     "google-chrome"
-    "vscode"
+    # "vscode"
 )
 if command -v dnf5; then
     export DNF_CMD=dnf5
