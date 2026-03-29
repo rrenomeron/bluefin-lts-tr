@@ -1,23 +1,23 @@
 # Bluefin LTS Standard Operating Environment
 
-This is an alternative 
-[standard operating environment](https://www.redhat.com/en/topics/management/what-is-an-soe)
-for my desktops and laptops based on [Bluefin LTS](https://docs.projectbluefin.io/lts/) rather than Fedora.  It's designed to have many
-of the same features as my [Fedora SOE](https://github.com/rrenomeron/tr-desktop-fedora), but
-with an Bluefin LTS base, for use cases where an Enterprise style operating system is needed.
+This is an alternative [standard operating
+environment](https://www.redhat.com/en/topics/management/what-is-an-soe) for my desktops and
+laptops based on [Bluefin LTS](https://docs.projectbluefin.io/lts/) rather than Fedora.  It's
+designed to have many of the same features as my [Fedora
+SOE](https://github.com/rrenomeron/tr-desktop-fedora), but with an Bluefin LTS base.
 
 See the Fedora [SOE README](https://github.com/rrenomeron/tr-desktop-fedora/blob/main/README.md)
 for more information.
 
 ## About This Image
 
-This image consists of Bluefin LTS in "developer mode" with the following changes
-and/or additions:
+This image consists of Bluefin LTS with the Hardware Enablement (HWE) kernel in "developer mode"
+with the following changes and/or additions:
 
-- "Gated" Kernel from the [Fedora CoreOS stable stream](https://www.fedoraproject.org/coreos/release-notes)
 - Google Chrome RPM installed and set as default browser
+- Virtual Machine Manager installed as RPM
 - Clocks set to AM/PM view with Weekday Display
-- Curated selection of Flatpak apps installed automatically
+- Different selection of Flatpak apps installed automatically via flatpak preinstall
 - Single click to open items in Nautilus
 - Nautilus icons [match accent
   color](https://extensions.gnome.org/extension/7535/accent-directories/)
