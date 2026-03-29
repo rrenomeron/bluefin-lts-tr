@@ -6,11 +6,18 @@ set -eoux pipefail
 
 echo "Install Bluefin packages missing from LTS"
 dnf install -y \
+    clinfo \
+    gnome-tweaks \
     nss-tools \
     netcat \
-    clinfo
+    virt-manager \
+    virt-viewer \
+    virt-v2v
 
 echo "Disabling unneeded/unwanted systemd units"
 systemctl disable tailscaled
 systemctl disable docker.socket
 systemctl disable docker.service
+
+echo "Enabling Flatpak Preinstall"
+systemctl enable flatpak-preinstall.service
