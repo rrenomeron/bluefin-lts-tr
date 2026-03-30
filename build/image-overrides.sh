@@ -7,7 +7,6 @@ set -eoux pipefail
 echo "Install Bluefin packages missing from LTS"
 dnf install -y \
     clinfo \
-    gnome-tweaks \
     nss-tools \
     netcat \
     virt-manager \
