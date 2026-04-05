@@ -44,7 +44,7 @@ COPY custom /custom
 COPY tr-osforge/reusable_scripting /oci/tr-osforge
 
 # Base Image (substitute with your chosen base image)
-FROM ghcr.io/ublue-os/bluefin-dx:lts-hwe-testing@sha256:93258ec138a61e5e6722f6daa033cb90d4daa0d49466455fcbf4c6ab2b2ca704
+FROM ghcr.io/ublue-os/bluefin-dx:lts-hwe
 
 
 ## Example alternative base images;
