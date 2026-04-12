@@ -15,6 +15,7 @@ OSFORGE_SCRIPTS_TO_USE=(
     "flatpak-substiution-removals"
     "tr-pki"
     "tr-ui"
+    "gnome-wallpaper"
     "google-chrome"
     # "vscode"
 )
