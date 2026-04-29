@@ -9,15 +9,17 @@ echo "Building ${IMAGE_NAME}:${TAG}"
 # suffix, e.g. putting "google-chrome" in this array will run "google-chrome.sh" in your build.
 # The scripts are run in order.
 
-# This is the standard list for a non-Bluefin desktop.
-# Remove "bluefin-parity" if the base image is Bluefin.
 OSFORGE_SCRIPTS_TO_USE=(
     "flatpak-substiution-removals"
     "tr-pki"
     "tr-ui"
     "gnome-wallpaper"
     "google-chrome"
-    # "vscode"
+    "vscode"
+    # Add these when they stop publishing the DX image
+    # "cockpit"
+    # "virtualization"
+    # "docker"
 )
 if command -v dnf5; then
     export DNF_CMD=dnf5
