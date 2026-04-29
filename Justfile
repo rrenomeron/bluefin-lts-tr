@@ -50,6 +50,12 @@ clean:
 sudo-clean:
     just sudoif just clean
 
+setup-submodule:
+    #!/usr/bin/bash
+    cd tr-osforge
+    git submodule init
+    git submodule update --remote
+    
 # sudoif bash function
 [group('Utility')]
 [private]
